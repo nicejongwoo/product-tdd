@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
-public class ProductServiceTest extends ApiTest {
+public class ProductApiTest extends ApiTest {
 
     @Test
     void 상품등록_테스트() throws Exception {
