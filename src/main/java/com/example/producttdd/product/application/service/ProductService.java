@@ -2,7 +2,9 @@ package com.example.producttdd.product.application.service;
 
 import com.example.producttdd.product.application.port.ProductPort;
 import com.example.producttdd.product.domain.Product;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ProductService {
     private final ProductPort productPort;
 

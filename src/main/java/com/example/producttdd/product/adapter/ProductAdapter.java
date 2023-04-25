@@ -2,7 +2,9 @@ package com.example.producttdd.product.adapter;
 
 import com.example.producttdd.product.application.port.ProductPort;
 import com.example.producttdd.product.domain.Product;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ProductAdapter implements ProductPort {
     private final ProductRepository productRepository;
 
