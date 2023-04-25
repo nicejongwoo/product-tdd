@@ -1,9 +1,12 @@
-package com.example.producttdd.product;
+package com.example.producttdd.product.application.service;
 
-class ProductService {
+import com.example.producttdd.product.application.port.ProductPort;
+import com.example.producttdd.product.domain.Product;
+
+public class ProductService {
     private final ProductPort productPort;
 
-    ProductService(ProductPort productPort) {
+    public ProductService(ProductPort productPort) {
         this.productPort = productPort;
     }
 

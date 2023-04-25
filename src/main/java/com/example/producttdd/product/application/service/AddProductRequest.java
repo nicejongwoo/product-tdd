@@ -1,8 +1,10 @@
-package com.example.producttdd.product;
+package com.example.producttdd.product.application.service;
 
+import com.example.producttdd.product.domain.DiscountPolicy;
 import org.springframework.util.Assert;
 
 public record AddProductRequest(String name, int price, DiscountPolicy discountPolicy) {
+
     public AddProductRequest(String name, int price, DiscountPolicy discountPolicy) {
         this.name = name;
         this.price = price;

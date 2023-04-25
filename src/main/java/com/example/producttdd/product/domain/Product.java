@@ -1,8 +1,8 @@
-package com.example.producttdd.product;
+package com.example.producttdd.product.domain;
 
 import org.springframework.util.Assert;
 
-class Product {
+public class Product {
     private Long id;
     private final String name;
     private final int price;

@@ -1,9 +1,11 @@
-package com.example.producttdd.product;
+package com.example.producttdd.product.adapter;
+
+import com.example.producttdd.product.domain.Product;
 
 import java.util.HashMap;
 import java.util.Map;
 
-class ProductRepository {
+public class ProductRepository {
     private Long sequence = 0L;
     private Map<Long, Product> persistence = new HashMap<>();
 
