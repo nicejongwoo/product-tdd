@@ -31,4 +31,11 @@ public class ProductService {
         GetProductResponse response = new GetProductResponse(product.getId(), product.getName(), product.getPrice(), product.getDiscountPolicy());
         return ResponseEntity.ok(response);
     }
+
+    public void updateProduct(Long productId, UpdateProductRequest request) {
+        Product product = productPort.getProduct(productId);
+        product.update(request.name(), request.price(), request.discountPolicy());
+
+        productPort.save(product);
+    }
 }
