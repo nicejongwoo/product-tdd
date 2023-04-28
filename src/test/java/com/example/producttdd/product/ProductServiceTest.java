@@ -3,12 +3,13 @@ package com.example.producttdd.product;
 import com.example.producttdd.product.application.service.GetProductResponse;
 import com.example.producttdd.product.application.service.ProductService;
 import com.example.producttdd.product.application.service.UpdateProductRequest;
-import com.example.producttdd.product.domain.DiscountPolicy;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
+
+import static com.example.producttdd.product.ProductSteps.*;
 
 @SpringBootTest
 public class ProductServiceTest {
@@ -18,9 +19,9 @@ public class ProductServiceTest {
 
     @Test
     void 상품수정_테스트() throws Exception {
-        productService.addProduct(ProductSteps.상품등록_요청_생성());
+        productService.addProduct(상품등록_요청_생성());
         final Long productId = 1L;
-        final UpdateProductRequest request = new UpdateProductRequest("상품 수정", 2000, DiscountPolicy.NONE);
+        final UpdateProductRequest request = 상품수정_요청_생성();
 
         productService.updateProduct(productId, request);
 
