@@ -1,4 +1,4 @@
-package com.example.producttdd.order;
+package com.example.producttdd.order.domain;
 
 import com.example.producttdd.product.domain.Product;
 import jakarta.persistence.*;
@@ -9,7 +9,7 @@ import org.springframework.util.Assert;
 @Entity
 @Table(name = "orders")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-class Order {
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
