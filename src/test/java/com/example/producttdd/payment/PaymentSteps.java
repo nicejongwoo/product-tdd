@@ -1,6 +1,6 @@
 package com.example.producttdd.payment;
 
-import com.example.producttdd.payment.PaymentRequest;
+import com.example.producttdd.payment.application.service.PaymentRequest;
 
 public class PaymentSteps {
     public static PaymentRequest 주문결제_요청_생성() {

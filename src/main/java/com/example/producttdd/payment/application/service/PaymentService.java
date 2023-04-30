@@ -1,11 +1,13 @@
-package com.example.producttdd.payment;
+package com.example.producttdd.payment.application.service;
 
 import com.example.producttdd.order.domain.Order;
+import com.example.producttdd.payment.application.port.PaymentPort;
+import com.example.producttdd.payment.domain.Payment;
 
-class PaymentService {
+public class PaymentService {
     private final PaymentPort paymentPort;
 
-    PaymentService(PaymentPort paymentPort) {
+    public PaymentService(PaymentPort paymentPort) {
         this.paymentPort = paymentPort;
     }
 

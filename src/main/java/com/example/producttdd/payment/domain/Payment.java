@@ -1,9 +1,9 @@
-package com.example.producttdd.payment;
+package com.example.producttdd.payment.domain;
 
 import com.example.producttdd.order.domain.Order;
 import org.springframework.util.Assert;
 
-class Payment {
+public class Payment {
     private Long id;
     private final Order order;
     private final String cardNumber;

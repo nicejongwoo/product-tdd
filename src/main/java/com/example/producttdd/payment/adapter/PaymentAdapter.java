@@ -1,6 +1,9 @@
-package com.example.producttdd.payment;
+package com.example.producttdd.payment.adapter;
 
 import com.example.producttdd.order.domain.Order;
+import com.example.producttdd.payment.adapter.PaymentRepository;
+import com.example.producttdd.payment.application.port.PaymentPort;
+import com.example.producttdd.payment.domain.Payment;
 import com.example.producttdd.product.domain.DiscountPolicy;
 import com.example.producttdd.product.domain.Product;
 
@@ -8,7 +11,7 @@ public class PaymentAdapter implements PaymentPort {
     private final PaymentGateway paymentGateway;
     private final PaymentRepository paymentRepository;
 
-    PaymentAdapter(PaymentGateway paymentGateway, PaymentRepository paymentRepository) {
+    public PaymentAdapter(PaymentGateway paymentGateway, PaymentRepository paymentRepository) {
         this.paymentGateway = paymentGateway;
         this.paymentRepository = paymentRepository;
     }

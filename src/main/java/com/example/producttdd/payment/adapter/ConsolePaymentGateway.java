@@ -1,4 +1,4 @@
-package com.example.producttdd.payment;
+package com.example.producttdd.payment.adapter;
 
 public class ConsolePaymentGateway implements PaymentGateway {
     @Override

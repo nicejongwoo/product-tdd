@@ -1,5 +1,12 @@
 package com.example.producttdd.payment;
 
+import com.example.producttdd.payment.adapter.ConsolePaymentGateway;
+import com.example.producttdd.payment.adapter.PaymentAdapter;
+import com.example.producttdd.payment.adapter.PaymentGateway;
+import com.example.producttdd.payment.adapter.PaymentRepository;
+import com.example.producttdd.payment.application.port.PaymentPort;
+import com.example.producttdd.payment.application.service.PaymentRequest;
+import com.example.producttdd.payment.application.service.PaymentService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
