@@ -6,7 +6,9 @@ import com.example.producttdd.payment.application.port.PaymentPort;
 import com.example.producttdd.payment.domain.Payment;
 import com.example.producttdd.product.domain.DiscountPolicy;
 import com.example.producttdd.product.domain.Product;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PaymentAdapter implements PaymentPort {
     private final PaymentGateway paymentGateway;
     private final PaymentRepository paymentRepository;

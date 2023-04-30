@@ -1,31 +1,31 @@
 package com.example.producttdd.payment;
 
-import com.example.producttdd.payment.adapter.ConsolePaymentGateway;
-import com.example.producttdd.payment.adapter.PaymentAdapter;
-import com.example.producttdd.payment.adapter.PaymentGateway;
-import com.example.producttdd.payment.adapter.PaymentRepository;
-import com.example.producttdd.payment.application.port.PaymentPort;
+import com.example.producttdd.order.OrderSteps;
+import com.example.producttdd.order.application.service.OrderService;
 import com.example.producttdd.payment.application.service.PaymentRequest;
 import com.example.producttdd.payment.application.service.PaymentService;
-import org.junit.jupiter.api.BeforeEach;
+import com.example.producttdd.product.ProductSteps;
+import com.example.producttdd.product.application.service.ProductService;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
+@SpringBootTest
 public class PaymentServiceTest {
 
+    @Autowired
     private PaymentService paymentService;
-    private PaymentPort paymentPort;
 
-    @BeforeEach
-    void setUp() {
-        PaymentGateway paymentGateway = new ConsolePaymentGateway();
-        PaymentRepository paymentRepository = new PaymentRepository();
+    @Autowired
+    private ProductService productService;
 
-        paymentPort = new PaymentAdapter(paymentGateway, paymentRepository);
-        paymentService = new PaymentService(paymentPort);
-    }
+    @Autowired
+    private OrderService orderService;
 
     @Test
     void 상품주문_테스트() throws Exception {
+        productService.addProduct(ProductSteps.상품등록_요청_생성());
+        orderService.createOrder(OrderSteps.상품주문_요청_생성());
         PaymentRequest request = PaymentSteps.주문결제_요청_생성();
 
         paymentService.payment(request);
