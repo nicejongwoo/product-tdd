@@ -13,7 +13,7 @@ class PaymentService {
         Order order = paymentPort.getOrder(request.orderId());
 
         Payment payment = new Payment(order, request.cardNumber());
-        paymentPort.pay(payment);
+        paymentPort.pay(payment.getPrice(), payment.getCardNumber());
         paymentPort.save(payment);
     }
 }

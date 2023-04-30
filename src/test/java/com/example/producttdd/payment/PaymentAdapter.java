@@ -4,7 +4,7 @@ import com.example.producttdd.order.domain.Order;
 import com.example.producttdd.product.domain.DiscountPolicy;
 import com.example.producttdd.product.domain.Product;
 
-class PaymentAdapter implements PaymentPort {
+public class PaymentAdapter implements PaymentPort {
     private final PaymentGateway paymentGateway;
     private final PaymentRepository paymentRepository;
 
@@ -19,12 +19,12 @@ class PaymentAdapter implements PaymentPort {
     }
 
     @Override
-    public void pay(Payment payment) {
-        paymentGateway.execute(payment);
+    public void save(Payment payment) {
+        paymentRepository.save(payment);
     }
 
     @Override
-    public void save(Payment payment) {
-        paymentRepository.save(payment);
+    public void pay(int totalPrice, String cardNumber) {
+        paymentGateway.execute(totalPrice, cardNumber);
     }
 }
