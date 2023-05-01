@@ -2,10 +2,7 @@ package com.example.producttdd.payment;
 
 import com.example.producttdd.ApiTest;
 import com.example.producttdd.order.OrderSteps;
-import com.example.producttdd.payment.application.service.PaymentRequest;
 import com.example.producttdd.product.ProductSteps;
-import io.restassured.response.ExtractableResponse;
-import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 
